@@ -17,7 +17,9 @@ response.redirect().toPath('/some/url')
 
 response.redirect().status(301).toPath('/some/url')
 response.redirect().toRoute('PostsController.show', { id: 1 })
+response.redirect('/dashboard')
 
 response.badRequest({ error: 'Invalid login credentials' })
+response.badRequest('Invalid credentials')
 response.forbidden({ error: 'Unauthorized' })
 response.created({ data: user })

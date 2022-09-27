@@ -47,3 +47,17 @@ await Mail.sendLater((message) => {
     url: 'https://your-app.com/verification-url',
   })
 })
+
+Route.get('/mailgun', async ({ response }: HttpContextContract) => {
+  await Mail.send((message: any) => {
+    message
+      .from('no-reply@wdit.in')
+      .to('furtadoduda@hotmail.com')
+      .subject('Welcome Onboard!')
+      .htmlView('email/auth', { link: 'http://localhost:3333/' })
+  })
+
+  return response.status(200).json({
+    message: "Everything going well"
+  })
+})
