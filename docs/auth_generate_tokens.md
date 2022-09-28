@@ -1,18 +1,19 @@
 # API tokens 
-auth.attempt() --> check the user from database and verifies their password
+
+auth.attempt() --> check the user from database and verifies their password  
 ! If the user credentials are correct, it will internally call the auth.generate method and returns the token
 
-Route.post('login', async ({ auth, request, response }) => {
-  const email = request.input('email')
-  const password = request.input('password')
+`Route.post('login', async ({ auth, request, response }) => {  
+  const email = request.input('email')  
+  const password = request.input('password')  
 
-  try {
-    const token = await auth.use('api).attempt(email, password)
-    return token
-  } catch (error) {
-    return response.unauthorized('Invalid credentials')
-  }
-})
+  try {  
+    const token = await auth.use('api).attempt(email, password)  
+    return token  
+  } catch (error) {  
+    return response.unauthorized('Invalid credentials')  
+  }  
+})`
 
 auth.genrate() || auth.login() -->  manually lookup the user, verify the passqord and call the auth.generate to generate the token
 
