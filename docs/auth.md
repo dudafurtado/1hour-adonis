@@ -1,5 +1,8 @@
-npm i @adonisjs/auth  
-node ace configure @adonisjs/auth  
+# Auth
+
+`npm i @adonisjs/auth` 
+
+`node ace configure @adonisjs/auth`  
 ! # CREATE: app/Models/User.ts  
 ! # CREATE: database/migrations/1619578304190_users.ts  
 ! # CREATE: contracts/auth.ts  
@@ -8,10 +11,10 @@ node ace configure @adonisjs/auth
 ! # CREATE: app/Middleware/SilentAuth.ts file already exists  
 ! # UPDATE: .adonisrc.json { providers += "@adonisjs/auth" }  
 ! # CREATE: ace-manifest.json file  
-  
-config/auth.ts  
+    
+> config/auth.ts  
 
-guard = provider + driver
+**guard = provider + driver**
 
 guards.provider:
 1. Lucid -  uses *data models* to lookup users <-->
