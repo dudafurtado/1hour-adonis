@@ -5,7 +5,10 @@ uses a session/cookie to login user
 used when creating a server rendered application or API havung a client running on the same domain
 
 npm i @adonisjs/session
-node ace configure @adonisjs/session
+node ace configure @adonisjs/session  
+
+.env  
+SESSION_DRIVER: Env.schema.string()
 
 ## Login
 
